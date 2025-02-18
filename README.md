@@ -6,38 +6,51 @@
 
 # Address.h
 ```
-private:
-	string street
-	string city
-	string state
-	int zip
+null parameter 
+private/protected(#)
+	# string street
+	# string city
+	# string state
+	# string zip
 public:
 	print Address
-		Adress a
-		a.init("street, city, state, zip")
-		a.print address
+		Address()
+		void init("street, city, state, zip")
+		void print address
 ```
 
 
 # Date.h
 ```
-private:
-	string birthdate (mm/dd/yyyy)
-	string grad date (mm/dd/yyyy)
+private/protected(#)
+	# string dateString (mm/dd/yyyy)
+	# int month
+	# int day
+	# int year
 public:
 	print Date
-		Date d
-		d.init("mm/dd/yyyy")
-		d.print date	
+		Date()
+		void init(dateString)
+			need algorithm for dataString going into init
+			and for "1" - January, "2" - February
+		void printDate()	
 ```
 
 # Student.h
 ```
-private:
-	string firstName
-	string lastName
-	int credit hours
+private/protected(#)
+	# string studentString
+	# string firstName
+	# string lastName
+	# Date* dob
+	# Date* expectedgrad
+	# Address* Adress
+	# int creditHours
 public:
-	
-	
+	Student()
+	-Student (destructor)
+	void init(studentString)
+		seperate string by commas to have a bunch of strings
+	void printStudent()
+	string getLastFirst()
 ```
