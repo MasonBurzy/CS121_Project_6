@@ -1,18 +1,18 @@
 #include <iostream>
+#include "address.h"
 /*
 #include "date.h"
-#include "address.h"
 #include "student.h"
 
-void testAddress();
 void testDate();
 void testStudent();
 */
+void testAddress();
 
 int main(){
 	std::cout << "Hello!" << std::endl;
-	/*
 	testAddress();
+	/*
   	testDate();
   	testStudent();
   	return 0;
@@ -21,7 +21,7 @@ int main(){
 } // end main
 
 
-/*
+
 
 void testAddress(){
   	Address a;
@@ -30,6 +30,7 @@ void testAddress(){
 
 } // end testAddress
 
+/*
 void testDate(){
  	Date d;
  	d.init("01/27/1997");
