@@ -1,22 +1,24 @@
 #include <iostream>
 #include "address.h"
-/*
 #include "date.h"
+
+/*
 #include "student.h"
 
-void testDate();
 void testStudent();
 */
+
+void testDate();
 void testAddress();
 
 int main(){
 	std::cout << "Hello!" << std::endl;
 	testAddress();
-	/*
   	testDate();
+	/*
   	testStudent();
-  	return 0;
 	*/
+  	return 0;
 
 } // end main
 
@@ -30,7 +32,7 @@ void testAddress(){
 
 } // end testAddress
 
-/*
+
 void testDate(){
  	Date d;
  	d.init("01/27/1997");
@@ -38,6 +40,7 @@ void testDate(){
 
 } // end testDate
 
+/*
 void testStudent(){
   	std::string studentString = "Danielle,Johnson,32181 Johnson Course Apt. 389,New Jamesside,IN,59379,02/17/2004,05/15/2027,65";
   	Student* student = new Student();

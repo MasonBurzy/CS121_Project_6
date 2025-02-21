@@ -1,11 +1,12 @@
 #include "date.h"
 #include <iostream>
+#include <sstream>
 
 Date::Date() {
-	dateString = "";
-	month = "";
-	day = "";
-	year = "";
+	dateString = "00/00/0000";
+	month = "00";
+	day = "00";
+	year = "0000";
 
 } // End Constructor
 

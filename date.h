@@ -1,6 +1,7 @@
-#ifndef ADDRESS_H_EXISTS
-#define ADDRESS_H_EXISTS
+#ifndef DATE_H_EXISTS
+#define DATE_H_EXISTS
 
+#include "address.h"
 #include <string>
 
 class Date {
