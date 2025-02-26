@@ -3,25 +3,32 @@
 #include <sstream>
 
 Date::Date() {
-	dateString = "00/00/0000";
-	month = "00";
-	day = "00";
-	year = "0000";
+	month = 0;
+	day = 0;
+	year = 0;
 
 } // End Constructor
 
-void date::init(std::dateString, std::month, std::day, std::year) {
-	date::dateString = dateString;
-	date::month = month;
-	date::day = day;
-	date::year = year;
-
+void Date::init(std::string dateString) {
+    char delim;
+    std::stringstream ss(dateString);
+    ss >> month >> delim >> day >> delim >> year;
+    
+    if (month < 1 || month > 12 || day < 1 || day > 31 || year < 1000) {
+        month = day = year = 0;  // Reset invalid dates
+        std::cout << "Invalid date provided!" << std::endl;
+    }
 }
 
-void date::printDate() {
-	std::cout << dateString << std::endl;
-	std::cout << city << std::endl;
-	std::cout << day << std::endl;
-	std::cout << zip << std::endl;
+void Date::printDate() {
+    static const std::string months[] = {
+        "", "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    };
 
+    if (month >= 1 && month <= 12) {
+        std::cout << months[month] << " " << day << ", " << year << std::endl;
+    } else {
+        std::cout << "Invalid Date" << std::endl;
+    }
 }
